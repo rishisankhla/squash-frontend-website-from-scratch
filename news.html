@@ -1,0 +1,227 @@
+<!-- definition that this document is an HTML5 document -->
+<!DOCTYPE html>
+
+<!-- declaration of the language Web page. This is meant to assist search engines and browsers -->
+<html lang="en">
+<link rel=“canonical“ href=”index.hmtl”>
+	
+<html>
+	
+<!-- HEAD SECTION that contains all the invisible (meta) information about the page -->
+<head>
+    
+  <!--appears in browser tab-->
+  <title>Squash Page</title>
+	
+  <!--encode any character of pretty much any language and browser knows how to interpret every character-->
+  <meta charset="utf-8">
+	
+  <!--description might be found by a service such as Google, which is building up a comprehensive list of pages around the web and gives some clue as to what the content will be-->
+  <meta name="description" content="Explore the Squash blog site!">
+	
+  <!--keywords so that search engines will be able to find the page and classify it accordingly - and when you search for key words in a search engine, it might come up with this page. -->
+  <meta name="keywords" content="squash, sports, game, racket, ball, club">	
+  <meta name="author" content="selfmade">
+	
+  <!--define how the page is presented on a variety of different devices, here: use the whole width of the device and scale to size one -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--refresh the page every 600 seconds-->
+  <meta name="refresh" content="600">
+	
+  <!--(no)index specifies if the site should get indexed by the search engine; (no)follow specifies if the robot can follow the link on the page to drill down into the site. Since site is in development, both are set to no-->
+  <meta name="robots" content="noindex,nofollow">
+	
+  <!--allow webpage to become a rich object in social networks-->
+  <meta name="og:image" property="og:image" content="picURL">
+  <meta name="og:title" property="og:title" content="squash page">
+  <meta name="og:description" property="og:description" content="Explore the Squash blog site!">
+  <meta name="og:url" property="og:url" content="pageURL">
+
+  <!-- reference to external stylesheet-->
+  <link rel="stylesheet" href="sitestyle.css">
+
+  <!-- google font pairings reference-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- google font icons reference-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+  <!--javascript file-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+    
+</head>
+
+<!-- BODY SECTION that contains the structure for all the visble content -->
+<body>
+    
+    <div class="grid-container-news">    
+        <!-- logo HEADER -->
+        <div id="news_logo">
+            <a class="logo" href="index.html" target="_self"><img src="img/squash_logo.jpg" alt="squash logo" width="180" height="180" onerror="this.src='img/squash_logo.jpg'"></a>
+        </div>
+
+        <!-- Navigation bar HEADER -->
+        <div id="new_nav">
+            <ul class="nav">
+                 <li style="float:right"><a href="index.html"><i class="material-icons">shopping_basket</i></a></li>
+                 <li style="float:right"><a href="index.html"><i class="material-icons">language</i></a></li>
+                 <li style="float:right"><a href="index.html"><i class="material-icons">accessible_forward</i></a></li>
+                 <li style="float:right" class="search"><input type="text" placeholder="Search.."></li>
+            </ul>
+            <div id="nav_li_items_main">
+                <label class="lab_nav" for="toggle_nav">&#9776;</label>
+                <input type="checkbox" id= "toggle_nav"/>
+                <div id="nav_li_items">
+                    <ul class="nav">
+                        <li class="nav"><a class="nav" href="index.html">HOME</a></li>
+                        <li class="nav"><a class="nav" href="visit.html">VISIT</a></li>
+                        <li class="nav"><a class="nav" href="ticket.html">OFFERS</a></li>
+                        <li class="nav"><a class="nav" href="news.html">NEWS</a></li>
+                        <li class="nav"><a class="nav" href="infopage.html">INFO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Covid information HEADER -->
+        <div id="new_covid">
+            <p class="attention">Find current visitor information reg. Covid-19 <a href="news.html" style="color:black; font"><u>here</u></a>.</p>
+        </div>
+
+        <!--div for th block of the main part-->
+        <div id = "new_page_section_1">
+            <div class="news-page-info">
+                <img src="img/planning.png" alt="Front page" width="50" height="50"> 
+                <h3> Magazine of the month </h3>
+                <p>It's our monthly Magazine, it covers everything related to squash game(like tournaments, latest rackets etc) and featuring player of the month: </p>
+                <img id ="image_news" src="img/main_front_page.jpg" alt="Front page" >
+            </div>
+        </div>
+
+        <!--aside panel-->
+        <aside>
+            <div id = "aside_stuff">
+                <div id = "aside_stuff_Overview">
+                    <p>Top game Results for the month: </p>
+                </div>
+                <div id = "aside_stuff_List">
+                    <script id="besttemplate" type="template/handlebars">
+                        {{list bestmatches}}
+                    </script>
+                    <span id="matches_details"></span>
+                    <script src="javascriptfile4.js"></script>
+                </div>
+            </div>
+        </aside>
+
+        <!--latest news section-->
+        <div id = "content_news">
+            <p>Here are the latest update regarding squash matches held last month:</p>
+
+            <!--latest news 1-->
+            <div class="next_news">
+                <h2>CHALLENGER TOUR WEEKLY PREVIEW: <a href="news.html">read</a></h2>
+                <a href="news.html">
+                 <img src="img/sq1.jpg" alt="update one" width= "100" height= "140">
+                </a>
+                <p> The Challenger Tour holds three events on three continents over the coming week, with tournaments taking place in Canada, India and Russia.<br><br>
+
+                    All three tournaments are being run with domestic entry restrictions due to the ongoing COVID-19 pandemic.<br><br>
+
+                    Squash Quebec Open,
+                    The first tournament of the week begins on Sunday 29 August at Club Atwater in Montreal, with the Squash Quebec Open taking place across the next five days.<br><br>
+
+                    The Challenger 5 level men’s event is for only those based in Canada, with World No.82 Shawn DeLierre the top seed. Michael McCue and David Baillargeon, both members of the world’s top 100, will also be in action.<br><br>
+
+                    Moscow Squash Tour III,
+                    For the third time in a short period, the Challenger Tour goes back to Russia, with the Moscow Squash Tour III being held at Squash Club Moscow from Saturday 4 to Sunday 5 September.<br><br>
+
+                    The Challenger 3 level event is for those currently living in Russia, with World No.161 Vladislav Titov and Ukrainian No.1 Valeriy Fedoruk seeded to meet in the final once again.</p>
+            </div>
+
+            <!--latest news 2-->
+            <div class="next_news">
+                 <h2>SCHRAGLAGE SQUASH OPEN: <a href="news.html">read</a></h2>
+                 <a href="news.html">
+                  <img src="img/sq2.jpg" alt="update two" width= "100" height= "140">
+                 </a>
+                 <p>The Schraglage Squash Open begins in Stuttgart, Germany tomorrow, with both a men’s and women’s draw taking place at Pink Power over the next three days.<br><br>
+
+                    The Challenger 5 and 3 level events are being run with regional restrictions due to the ongoing COVID-19 pandemic, allowing entrants from across Europe to participate in the tournament.<br><br>
+
+                    England’s World No.90 Robert Downer will be the top seed for the men’s draw, with Czech Republic’s Martin Svec and the German duo of Yannik Omlor and Valentin Rapp.<br><br>
+
+                    12 nationalities will be represented in total across both the men’s and women’s, with the likes of Dutch No.1 Roshan Bharos, Belgium’s Joeri Hapers and the Swiss duo of Yannick Wilhelmi and Robin Gadola.<br><br>
+
+                    The women’s draw features the German trio of Saskia Beinhard, Katerina Tycova and Aylin Gunsav, who will all be amongst the seeds on home soil.<br><br>
+
+                    Frenchwoman Taba Taghavi, Austria’s Jacqueline Peychar and the Swiss trio of Stella Kaufmann, Ambre Allinckx and Nadia Pfister will be the rest of the seeds.<br><br>
+
+                    We spoke to Pfister who will be the top seed for the women’s event, earlier this week, ahead of the Schraglage Squash Open.</p>
+            </div>
+
+            <!--latest news 3-->
+            <div class="next_news">
+                 <h2>SQUASH QUEBEC OPEN: <a href="news.html">read</a></h2>
+                 <a href="news.html">
+                  <img src="img/sq3.jpg" alt="update three" width= "100" height= "140">
+                 </a>
+                 <p>The Squash Quebec Open begins later today at Club Atwater in Montreal, with the Challenger 5 tournament taking place over the next five days.<br><br>
+
+                    Due to the ongoing COVID-19 pandemic, the tournament is being run with domestic entry restrictions, allowing only those currently based in Canada to participate.<br><br>
+
+                    Two non-Canadians will be in action this week in Quebec, with Pakistan’s Rafi Khan and Bermudan Taylor Carrick both featuring in the tournament.<br><br>
+
+                    Apart from that, the rest of the 24-strong field hail from Canada, with three members of the top 100 in action. Michael McCue and David Baillargeon will both be in action, along with World No.82, and the tournament’s top seed, Shawn DeLierre.<br><br>
+
+                    The Canadian No.1 will be featuring on the PSA Tour for the first time since prior to the start of the COVID-19 pandemic, with his last tournament being the Assante Wealth Management Carter Classic back in Februrary 2020. DeLierre admits that he has used to break to his advantage.</p>
+            </div>
+
+            <!--latest news 4-->
+            <div class="next_news">
+                <h2>SCHRAGLAGE SQUASH OPEN: <a href="news.html">read</a></h2>
+                <a href="news.html">
+                 <img src="img/sq4.jpg" alt="update four" width= "100" height= "140">
+                </a>
+                <p>England’s Robert Downer and Spain’s Marta Dominguez Fernandez have claimed the titles at the Schraglage Squash Open, with the pair both winning lengthy finals at the Pink Power Club in Stuttgart on Sunday afternoon.<br><br>
+
+                    Due to the ongoing COVID-19 pandemic, the Challenger 5 and 3 level events were run with regional entry restrictions, allowing those currently living in Europe to participate in the tournament.<br><br>
+
+                    Fernandez was featuring in only her second Tour event, having made her debut at the Squash Eredivisie – Speelronde 6 event in Amsterdam earlier this month, where she made the final.<br><br>
+
+                    She went on to do one better this time round, defeating four of the top six seeds en route to her maiden victory on the Tour. The Spaniard started her campaign against No.3 seed Saskia Beinhard before then beating No.6 seed Aylin Gunsav to make it into the last four.<br><br>
+
+                    In the semi-finals, the 20-year-old downed the tournament’s top seed Nadia Pfister in a four-game battle, before winning the final against No.2 seed Ambre Allinckx with the same scoreline, 3-1.<br><br>
+
+                    The men’s event was won by Englishman Robert Downer, who claimed his second victory of 2021, after winning at the Czech Pro Series 2 earlier this season.<br><br>
+
+                    The World No.90 began his week with a win over Rene Mijs in the first round, before then Toufik Mekhalfi and Joeri Hapers to move into the semi-finals.</p>
+            </div>
+
+        </div>
+
+        <!-- Social media FOOTER -->
+        <div id="social_news">
+            <ul class="social">
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">feed</i></a></li>
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">thumb_up_alt</i></a></li>
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">android</i></a></li>
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">facebook</i></a></li>
+            </ul>
+        </div>
+
+        <!-- General information FOOTER -->
+        <script id="template" type="template/handlebars">
+            {{{content}}}
+        </script>
+        <script src="javascriptfile3.js"></script>
+
+    </div>
+
+</body>
+    
+</html>

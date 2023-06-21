@@ -1,0 +1,248 @@
+<!-- definition that this document is an HTML5 document -->
+<!DOCTYPE html>
+
+<!-- declaration of the language Web page. This is meant to assist search engines and browsers -->
+<html lang="en">
+<link rel=“canonical“ href=”index.hmtl”>
+	
+<html>
+	
+<!-- HEAD SECTION that contains all the invisible (meta) information about the page -->
+<head>
+    
+  <!--appears in browser tab-->
+  <title>Squash Page</title>
+	
+  <!--encode any character of pretty much any language and browser knows how to interpret every character-->
+  <meta charset="utf-8">
+	
+  <!--description might be found by a service such as Google, which is building up a comprehensive list of pages around the web and gives some clue as to what the content will be-->
+  <meta name="description" content="Explore the Squash blog site!">
+	
+  <!--keywords so that search engines will be able to find the page and classify it accordingly - and when you search for key words in a search engine, it might come up with this page. -->
+  <meta name="keywords" content="squash, sports, game, racket, ball, club">	
+  <meta name="author" content="selfmade">
+	
+  <!--define how the page is presented on a variety of different devices, here: use the whole width of the device and scale to size one -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--refresh the page every 600 seconds-->
+  <meta name="refresh" content="600">
+	
+  <!--(no)index specifies if the site should get indexed by the search engine; (no)follow specifies if the robot can follow the link on the page to drill down into the site. Since site is in development, both are set to no-->
+  <meta name="robots" content="noindex,nofollow">
+	
+  <!--allow webpage to become a rich object in social networks-->
+  <meta name="og:image" property="og:image" content="picURL">
+  <meta name="og:title" property="og:title" content="squash page">
+  <meta name="og:description" property="og:description" content="Explore the Squash blog site!">
+  <meta name="og:url" property="og:url" content="pageURL">
+
+  <!-- reference to external stylesheet-->
+  <link rel="stylesheet" href="sitestyle.css">
+
+  <!-- google font pairings reference-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- google font icons reference-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+  <!-- javascript file-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+  
+</head>
+
+<!-- BODY SECTION that contains the structure for all the visble content -->
+<body>
+    
+    <div class="grid-container-visit-main"> 
+
+        <!--logo HEADER -->
+        <div id="visit_logo-main">
+            <a class="logo" href="index.html" target="_self">
+                <img src="img/squash_logo.jpg" alt="squash logo" width="180" height="180" onerror="this.src='img/squash_logo.jpg'">
+            </a>
+        </div>
+
+        <!-- Navigation bar HEADER -->
+        <div id="visit_nav-main">
+            <ul class="nav">
+                 <li style="float:right"><a href="index.html"><i class="material-icons">shopping_basket</i></a></li>
+                 <li style="float:right"><a href="index.html"><i class="material-icons">language</i></a></li>
+                 <li style="float:right"><a href="index.html"><i class="material-icons">accessible_forward</i></a></li>
+                 <li style="float:right" class="search"><input type="text" placeholder="Search.."></li>
+            </ul>
+            <div id="nav_li_items_main">
+                <label class="lab_nav" for="toggle_nav">&#9776;</label>
+                <input type="checkbox" id= "toggle_nav"/>
+                <div id="nav_li_items">
+                    <ul class="nav">
+                        <li class="nav"><a class="nav" href="index.html">HOME</a></li>
+                        <li class="nav"><a class="nav" href="visit.html">VISIT</a></li>
+                        <li class="nav"><a class="nav" href="ticket.html">OFFERS</a></li>
+                        <li class="nav"><a class="nav" href="news.html">NEWS</a></li>
+                        <li class="nav"><a class="nav" href="infopage.html">INFO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>	
+
+        <!-- Covid information HEADER -->
+        <div id="visit_covid-main">
+            <p class="attention">Find current visitor information reg. Covid-19 <a href="visit.html" style="color:black; font"><u>here</u></a>.</p>
+        </div>
+
+        <!--slide show code for visit page-->
+        <!--Took help from "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow"-->
+        <div id="visit_js_imgshow">
+            <div class="slideshow-container2">
+                <div class="mySlides2 fade2">
+                  <div class="numbertext2">1 / 3</div>
+                  <img class="img32" src="img/squash1.jpg">
+                </div>
+                <div class="mySlides2 fade2">
+                  <div class="numbertext2">2 / 3</div>
+                  <img class="img32" src="img/squash3.jpg">
+                </div>
+                <div class="mySlides2 fade2">
+                  <div class="numbertext2">3 / 3</div>
+                  <img class="img32" src="img/squash5.jpg">
+                </div>
+                <a class="prev2" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next2" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot2" onclick="currentSlide(1)"></span> 
+                <span class="dot2" onclick="currentSlide(2)"></span> 
+                <span class="dot2" onclick="currentSlide(3)"></span> 
+            </div>
+        </div>
+        <!--javascript code for slideshow-->
+        <script src="javascriptfile2.js"></script>
+
+        <!--div for th block of the main part-->
+        <div id="vist_page_image_1"> 
+            <div class="visit_img_resize">
+                <img src="img/p%20(1).jpeg" alt="" class="visit_pg_img">
+                <div class="middle_tx">
+                    <div class="text_tx">
+                        <h3>Country-side Club </h3>
+                        <p> This club has 4 squash courts and a sports-bar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="vist_page_image_2">   
+            <div class="visit_img_resize">
+                <img src="img/p%20(1).jpg" alt="" class="visit_pg_img">
+                <div class="middle_tx">
+                    <div class="text_tx">
+                        <h3>Tournament Club </h3>
+                        <p> This club is mainly build for national squash tournaments with sitting of 500 people.</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div id="vist_page_image_3">   
+            <div class="visit_img_resize">
+                <img src="img/p%20(2).jpg" alt="" class="visit_pg_img">
+                <div class="middle_tx">
+                    <div class="text_tx">
+                        <h3>Community Club </h3>
+                        <p> It's a small size club with 3 squash courts and a racket shop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <div id="vist_page_image_4">   
+            <div class="visit_img_resize">
+                <img src="img/p%20(3).jpg" alt="" class="visit_pg_img">
+                <div class="middle_tx">
+                    <div class="text_tx">
+                        <h3>Charity-Sports Club </h3>
+                        <p> This club has the cheapest facilities when compare to other clubs. </p>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <div id="vist_page_image_5">   
+            <div class="visit_img_resize">
+                <img src="img/p%20(4).jpg" alt="" class="visit_pg_img">
+                <div class="middle_tx">
+                    <div class="text_tx">
+                        <h3>Premium Club </h3>
+                        <p>This is our biggest club with all top of facilities and 6 squash courts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <div id="vist_page_image_6">   
+            <div class="visit_img_resize">
+                <img src="img/p%20(5).jpg" alt="" class="visit_pg_img">
+                <div class="middle_tx">
+                    <div class="text_tx">
+                        <h3>Coaching Club </h3>
+                        <p>This is our coaching club where you can also learn to play squash while playing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div id="vist_page_image_7">   
+            <div class="visit_img_resize">
+                <img src="img/p%20(6).jpg" alt="" class="visit_pg_img">
+                <div class="middle_tx">
+                    <div class="text_tx">
+                        <h3>University Club </h3>
+                        <p>This club is mainly build for students with more than 10 squash courts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div id="vist_page_image_8">   
+            <div class="visit_img_resize">
+                <img src="img/p%20(7).jpg" alt="" class="visit_pg_img">
+                <div class="middle_tx">
+                    <div class="text_tx">
+                        <h3>City Club </h3>
+                        <p>This club is located in the heart of london city with plenty of sports facilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div id="vist_page_image_9">   
+            <div class="visit_img_resize">
+                <img src="img/p%20(8).jpg" alt="" class="visit_pg_img">
+                <div class="middle_tx">
+                    <div class="text_tx">
+                        <h3>Childrens Club </h3>
+                        <p>The purpose of this club is to provide squash training to under 19 teenagers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social media FOOTER -->
+        <div id="visit_social-main">
+            <ul class="social">
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">feed</i></a></li>
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">thumb_up_alt</i></a></li>
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">android</i></a></li>
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">facebook</i></a></li>
+            </ul>
+        </div>
+
+        <!-- General information FOOTER -->
+        <script id="template" type="template/handlebars">
+            {{{content}}}
+        </script>
+        <script src="javascriptfile3.js"></script>
+
+    </div>
+
+</body>
+    
+</html>

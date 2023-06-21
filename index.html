@@ -1,0 +1,205 @@
+<!-- definition that this document is an HTML5 document -->
+<!DOCTYPE html>
+
+<!-- declaration of the language Web page. This is meant to assist search engines and browsers -->
+<html lang="en">
+	
+<html>
+	
+<!-- HEAD SECTION that contains all the invisible (meta) information about the page -->
+<head>
+    
+  <!--appears in browser tab-->
+  <title>Squash Page</title>
+	
+  <!--encode any character of pretty much any language and browser knows how to interpret every character-->
+  <meta charset="utf-8">
+	
+  <!--description might be found by a service such as Google, which is building up a comprehensive list of pages around the web and gives some clue as to what the content will be-->
+  <meta name="description" content="Explore the Squash blog site!">
+	
+  <!--keywords so that search engines will be able to find the page and classify it accordingly - and when you search for key words in a search engine, it might come up with this page. -->
+  <meta name="keywords" content="squash, sports, game, racket, ball, club">	
+  <meta name="author" content="SelfMade">
+	
+  <!--define how the page is presented on a variety of different devices, here: use the whole width of the device and scale to size one -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--refresh the page every 600 seconds-->
+  <meta name="refresh" content="600">
+	
+  <!--(no)index specifies if the site should get indexed by the search engine; (no)follow specifies if the robot can follow the link on the page to drill down into the site. Since site is in development, both are set to no-->
+  <meta name="robots" content="noindex,nofollow">
+	
+  <!--allow webpage to become a rich object in social networks-->
+  <meta name="og:image" property="og:image" content="picURL">
+  <meta name="og:title" property="og:title" content="Squash Page">
+  <meta name="og:description" property="og:description" content="Explore the Squash blog site!">
+  <meta name="og:url" property="og:url" content="pageURL">
+
+  <!-- reference to external stylesheet-->
+  <link rel="stylesheet" href="sitestyle.css">
+
+  <!-- google font pairings reference-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+  
+  <!-- google font icons reference-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- javascript library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+    
+</head>
+
+<!-- BODY SECTION that contains the structure for all the visble content -->
+<body>
+	
+    <div class="grid-container-index">
+        
+        <!-- logo HEADER -->
+        <div id="logo">
+            <a class="logo" href="index.html" target="_self">
+                <img src="img/squash_logo.jpg" alt="squash logo" width="180" height="180" onerror="this.src='img/squash_logo.jpg'">
+            </a>
+        </div>
+        
+         <!-- Navigation bar HEADER -->
+        <div id="nav">
+            <ul class="nav">
+                 <li style="float:right"><a href="index.html"><i class="material-icons">shopping_basket</i></a></li>
+                 <li style="float:right"><a href="index.html"><i class="material-icons">language</i></a></li>
+                 <li style="float:right"><a href="index.html"><i class="material-icons">accessible_forward</i></a></li>
+                 <li style="float:right" class="search"><input type="text" placeholder="Search.."></li>
+            </ul>
+            <div id="nav_li_items_main">
+                <label class="lab_nav" for="toggle_nav">&#9776;</label>
+                <input type="checkbox" id= "toggle_nav"/>
+                <div id="nav_li_items">
+                    <ul class="nav">
+                        <li class="nav"><a class="nav" href="index.html">HOME</a></li>
+                        <li class="nav"><a class="nav" href="visit.html">VISIT</a></li>
+                        <li class="nav"><a class="nav" href="ticket.html">OFFERS</a></li>
+                        <li class="nav"><a class="nav" href="news.html">NEWS</a></li>
+                        <li class="nav"><a class="nav" href="infopage.html">INFO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Covid information HEADER -->
+        <div id="covid">
+            <p class="attention">Find current visitor information reg. Covid-19 <a href="index.html" style="color:black; font"><u>here</u></a>.</p>
+        </div>
+
+        <!-- Main video on start page -->
+        <div id="vid">
+            <div class="overlay"> 
+                <p id="vidtext" style="font-size:4vw">BECAUSE SPORTS IS ABOUT DISCIPLINE</p>
+            </div>
+            <video class="our_main_video" width="400" height="200" autoplay muted>
+                <source src="vid/main_vid.mp4" type="video/mp4">
+            </video>
+        </div> 
+
+        <!-- Tile 1 on start page - OUR CLUB FACILITIES -->
+        <div id="tile1">
+            <h3>OUR CLUB FACILITIES</h3>
+            <a class="img1" href="index.html" target="_self"><img src="img/sq_dinning.jpg" alt="picture of attraction" width="300" height="180" onerror="this.src='img/logo.jpg'"></a>
+            <ul>
+                <li>Sports bars</li>
+                <li>Sports dining</li>
+                <li>Sports equipment shops</li>
+            </ul>
+            <i class="material-icons">double_arrow</i>
+            <p><a class="index_link_hover" href="infopage.html">Explore All</a></p>
+        </div>
+        
+        <!-- Tile 2 on start page - Tickets -->
+        <div id="tile2">
+            <h3>MOST POPULAR CLUB COMBOS</h3>
+            <a class="img1" href="index.html" target="_self"><img src="img/sq_combo.png" alt="picture of attraction" width="260" height="300" onerror="this.src='img/logo.jpg'"></a>
+            <p><i>Membership Packs</i></p>
+            <ul>
+                <li>Monthly membership combo.</li>
+                <li>Yearly membership combo.</li>
+                <li>Daily ticket Price</li>
+            </ul>
+            <i class="material-icons">double_arrow</i>
+            <p><a class="index_link_hover" href="ticket.html">Buy Now</a></p>
+        </div>
+        
+        <!-- Tile 3 on start page - Events -->
+        <div id="tile3">
+            <h3>SPECIAL EVENTS</h3>
+            <a class="img1" href="index.html" target="_self"><img src="img/sq_event.jpeg" alt="picture of attraction" width="180" height="300" onerror="this.src='img/logo.jpg'"></a>
+            <p><i>Tournaments organised by club</i></p>
+            <ul>
+                <li>Women’s national open championship </li>
+                <li>Men's national open championship</li>
+                <li>Under 19 kids tournaments</li>
+            </ul>
+            <i class="material-icons">double_arrow</i>
+            <p><a class="index_link_hover" href="visit.html">More Info</a></p>
+        </div>
+
+        <!-- Slide show starts-->
+        <!-- We learnt to built slide-show(in just CSS and HTML) with the help of https://www.youtube.com/watch?v=9Irz0c-6UGw -->
+        <div id="slidershow_mainid" class="slidershow_main"> 
+            <div class="slidershow">
+              <div class="slides">
+                <input type="radio" name="r" id="r1" checked>
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+                <input type="radio" name="r" id="r5">
+                <div class="slide s1">
+                  <img src="img/squash1.jpg" alt="">
+                </div>
+                <div class="slide3">
+                  <img src="img/squash2.jpg" alt="">
+                </div>
+                <div class="slide3">
+                  <img src="img/squash3.jpg" alt="">
+                </div>
+                <div class="slide3">
+                  <img src="img/squash4.jpg" alt="">
+                </div>
+                <div class="slide3">
+                  <img src="img/squash5.jpg" alt="">
+                </div>
+              </div>
+              <div class="navigation_bar">
+                <label for="r1" class="bar">1</label>
+                <label for="r2" class="bar">2</label>
+                <label for="r3" class="bar">3</label>
+                <label for="r4" class="bar">4</label>
+                <label for="r5" class="bar">5</label>
+              </div>
+            </div>
+        </div>
+
+        <!-- Social media FOOTER -->
+        <div id="social">
+            <ul class="social">
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">feed</i></a></li>
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">thumb_up_alt</i></a></li>
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">android</i></a></li>
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">facebook</i></a></li>
+            </ul>
+        </div>
+
+        <!-- General information FOOTER -->
+        <script id="template" type="template/handlebars">
+            {{{content}}}
+        </script>
+        <script src="javascriptfile3.js"></script>
+        
+    </div>
+
+</body>
+    
+</html>
+    

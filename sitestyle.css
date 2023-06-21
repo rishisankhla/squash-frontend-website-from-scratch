@@ -1,0 +1,2034 @@
+/*_____________________________HEADER COMMON CSS_______________________________________*/
+
+/*___HEADER css___*/
+
+#logo{ 
+    grid-area: logo; 
+}
+#nav{ 
+    grid-area: nav; 
+}
+#covid{ 
+    grid-area: covid; 
+}
+
+/*button animation starting*/
+
+a.nav:active{
+  transform: translateY(4px);
+}
+
+/*button animation starting*/
+
+li.nav a.nav:hover { 
+  /* Change the link color to black on hover */
+  background-color: black;
+  color:white;
+}
+.nav{
+	margin: 15px 10px 10px 5px;
+}
+#toggle_nav{
+     display: none;
+}
+i.material-icons, li.search {
+	margin-top: 20px;
+	margin-bottom: 0px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.material-icons{
+	color:black;
+}
+
+/*logo*/
+
+img {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+/*font*/
+
+body{
+  font-family: Lora, serif; /*use this font for standard text*/
+  font-size: 100%; /*set a default font-size in percent for the <body> element*/
+  font-size: 1em; /*pixels/16=em; em is used to allow users to resize the text (in the browser menu)*/
+}
+
+/* background-color for call-to action areas*/
+
+.attention{
+	background-color: rgb(235,200,21);
+}
+
+/*video text*/
+
+@font-face 
+{ 
+	font-family: blanka-regular; 
+	src: url("font/blanka-regular.otf"); 
+} 
+#vidtext{
+	font-family: blanka-regular;
+}
+
+/*Progress bar*/
+
+#the_progress_bar{
+    border-bottom: 2px solid green;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/*___________________________________index.html CSS___________________________________*/
+
+#slidershow_mainid{
+    grid-area:slidershow_mainid;
+}
+#vid{ 
+    grid-area: vid; 
+}
+#tile1{ 
+    grid-area: tile1; 
+}
+#tile2{ 
+    grid-area: tile2; 
+}
+#tile3{ 
+    grid-area: tile3; 
+}
+#social{ 
+    grid-area: social; 
+}
+.final_footer_main_block{
+    grid-area: final_footer_main_block;
+}
+
+/*slide show css starts*/
+/* We learnt to built slide-show(in just CSS and HTML) with the help of https://www.youtube.com/watch?v=9Irz0c-6UGw */
+
+.navigation_bar{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.bar{
+  width: 50px;
+  height: 17px;
+  border: 2px solid rgb(120,60,132);
+  background: rgb(120,60,132);
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.bar:hover{
+  background: rgb(77,58,129);
+}
+.bar:active{
+  transform: translateY(8px);
+}
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+.slide3 img{
+  width: 100%;
+  height: 100%;
+}
+.s1 img{
+  width: 100%;
+  height: 100%;
+}
+.slide3{
+    width: 20%;
+}
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+
+/* section tiles*/
+
+#tile2{
+	background-color: rgb(245,245,245);
+	color:black;
+    padding:20px;
+    border-radius: 30px;
+    border: 4px solid black;
+}
+#tile1, #tile3
+{
+	background-color: rgb(245,245,245);
+	color:black;
+    padding:20px;
+    border-radius: 30px;
+    border: 4px solid black;
+}
+.index_link_hover:hover{
+    color: red;
+}
+
+/*section social*/
+
+ul.social{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+li.social{
+  float: right;
+}
+li.social a.social {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px 10px 10px;
+  text-decoration: none;
+}
+.social{
+	font-size: 36px;
+}
+
+/*___video z-index___*/
+
+video{
+  width: 100%;
+  height: auto;
+}
+.overlay{
+    z-index: 1;
+    color: black;
+    padding:2px;
+    border:8px solid black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: white;
+    animation-name: animation_vid1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 10s;
+    opacity: 0;
+}
+@keyframes animation_vid1 {
+  to  {  opacity: 1;}
+}
+#vid {
+    text-align: center;
+    position: relative;
+}
+
+/*___________________________________ticket.html CSS__________________________________*/
+
+#tp1{ 
+    grid-area: tp1; 
+}
+#tp2{ 
+    grid-area: tp2; 
+}
+#tp3{ 
+    grid-area: tp3; 
+}
+#tp4{ 
+    grid-area: tp4; 
+}
+#voucher{ 
+    grid-area: voucher; 
+}
+#paymentMethods{ 
+    grid-area: paymentMethods; 
+}
+#social{ 
+    grid-area: social; 
+}
+.ticket_page_content{
+    grid-area: ticket_page_content;
+}
+#our_payment_form{
+    grid-area: our_payment_form;
+    margin: auto;
+    background-color:lightcyan;
+    padding: 20px;
+}
+
+/*___ticket page animation___*/
+#tp1:hover,#tp2:hover,#tp3:hover,#tp4:hover,#voucher:hover,#paymentMethods:hover{
+     position: relative;
+     animation-name: animation8;
+     animation-duration: 0.2s;
+     animation-fill-mode: forwards;
+}
+#tp1:hover,#tp2:hover,#tp3:hover,#tp4:hover,#voucher:hover{
+     cursor: pointer;
+}
+@keyframes animation8 {
+  from  { left:0px; top:0px;}
+  to  { left:-10px; top:-10px; background-color: lightyellow; color: black;}
+}
+#form_main_section{
+    display: flex;
+}
+#form_two{
+    display: flex;
+}
+#form_part1{
+    margin-right: 15px;
+}
+#give_space_in_form{
+    margin-left: 20px;
+}
+#form_line_outer{
+    border: 5px groove ;
+}
+.form_button:hover{
+    color: white;
+}
+.form_button:active{
+    transform: translate(2px,2px);
+}
+
+/*___________________________________infopage.html CSS___________________________________*/
+
+#vpp1{
+    grid-area: one;
+}
+#vpp2{
+    grid-area: two;
+}
+#vpp3{
+    grid-area: three;
+}
+#vpp4{
+    grid-area: four;
+}
+#vpp5{
+    grid-area: five;
+}
+#vpp6{
+    grid-area: six;
+}
+#visit_logo{
+    grid-area:visit_logo;
+}
+#visit_nav{
+    grid-area:visit_nav;
+}
+#visit_covid{
+    grid-area:visit_covid;
+}
+#visit_social{
+    grid-area:visit_social;
+}
+#info_text_button{
+    grid-area: info_text_button;
+}
+#info_text_button{
+    margin: auto;
+    margin-bottom: 15px;
+}
+#info_text_button select { 
+    width:200px; 
+    height: 26px;
+}
+#vpp1 .visit-page-info1{
+    font-family: Lora, serif; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 1em;
+    background-color: white;
+    color: black;
+    padding:20px;
+    border:2px solid black;
+    margin:2px;    
+}
+#vpp3, #vpp5, #vpp7 .visit-page-info1{
+    font-family: Lora, serif; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 1em;
+    background-color: white;
+    color: black;
+    padding:20px;
+    border:2px solid black;
+    margin:2px; 
+}
+#vpp2, #vpp4, #vpp6, #vpp8 .visit-page-info{
+    font-family: Lora, serif; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 1em;
+    background-color: white;
+    color: black;
+    padding:20px;
+    border:2px solid black;
+    margin:2px; 
+}
+
+/*___info animation css modification___*/
+
+#vpp2:hover, #vpp3:hover, #vpp4:hover, #vpp5:hover, #vpp6:hover{
+     position: relative;
+     animation-name: animation4;
+     animation-duration: 0.2s;
+     animation-fill-mode: forwards;
+}
+@keyframes animation4{
+  from {left:0px; top:0px;}
+  to {left:-10px; top:-10px; background-color: rgb(204,204,204);}
+}
+
+/*_____________________________News page CSS_______________________________________*/
+
+#news_logo{
+    grid-area: news_logo;
+}
+#new_nav{
+    grid-area: new_nav;
+}
+#new_covid{
+    grid-area: new_covid;
+}
+#new_page_section_1{
+    grid-area: new_page_section_1;
+}
+aside{
+    grid-area: aside;
+}
+#content_news{
+    grid-area: content_news;
+}
+#social_news{
+    grid-area: social_news;
+}
+aside{
+  background: white;
+  padding:20px;
+  height: auto;
+  border:3px solid black;
+}
+aside #aside_stuff{
+    background: rgb(245,245,245);
+    height: 100%;
+    border:1px solid lightgray;
+    width:100%;
+}
+aside #aside_stuff_Overview{
+    padding:20px;
+}
+aside #aside_stuff_Overview p{
+  font-weight: bold;
+  font-size: 22px;
+} 
+aside #aside_stuff_List li{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: black;
+  margin-bottom: 20px;
+  padding:15px;
+} 
+#content_news{
+  border: 3px solid black;
+  border-right: none;
+  padding:20px;
+}
+#content_news p:first-child{
+   font-weight: bold;
+   font-size: 25px;
+}
+#content_news .next_news{
+  background: rgb(245,245,245);
+  padding:20px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  border-style:outset;
+}
+#content_news .next_news h2 a{
+  font-family: 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  font-size: 18px;;
+  color: blue;
+}
+.news-page-info h3{
+    font-size: 22px;
+}
+.news-page-info p{
+    font-size: 17px;
+}
+#content_news .next_news h2 a:hover{
+    color: red;
+}
+
+/*___news image css modification___*/
+#image_news {
+     box-shadow: 15px 15px 8px #bbbbbb;
+     animation-name: animation1;
+     animation-duration: 2s;
+     animation-fill-mode: forwards;
+     margin-left: auto;
+     margin-right: auto;
+     display: block;
+}
+
+/*_____________________________Visit page CSS_______________________________________*/
+
+/*-here I took help from "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity"---*/
+
+.visit_pg_img{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.middle_tx {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.visit_img_resize:hover .visit_pg_img {
+  opacity: 0.2;  
+}
+.visit_img_resize:hover .middle_tx {
+  opacity: 1;
+}
+
+/*-here I took help from "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow"---*/
+
+.img32{
+vertical-align: middle;
+height: 100%;
+width: 100%;
+}
+.slideshow-container2{
+  max-width: 1000px;
+    max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+.prev2, .next2 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next2{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev2:hover, .next2:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.numbertext2{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot2{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot2:hover {
+  background-color: #717171;
+}
+.fade2{
+  -webkit-animation-name: fade2;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade2;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade2 {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade2 {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+#visit_js_imgshow{
+    grid-area: visit_js_imgshow;
+}
+#visit_logo-main{
+    grid-area: visit_logo-main;
+}
+#visit_nav-main{
+    grid-area: visit_nav-main;
+}
+#visit_covid-main{
+    grid-area: visit_covid-main;
+}
+#vist_page_image_1{
+    grid-area: vist_page_image_1;
+}
+#vist_page_image_2{
+    grid-area: vist_page_image_2;
+}
+#vist_page_image_3{
+    grid-area: vist_page_image_3;
+}
+#vist_page_image_4{
+    grid-area: vist_page_image_4;
+}
+#vist_page_image_5{
+    grid-area: vist_page_image_5;
+}
+#vist_page_image_6{
+    grid-area: vist_page_image_6;
+}
+#vist_page_image_7{
+    grid-area: vist_page_image_7;
+}
+#vist_page_image_8{
+    grid-area: vist_page_image_8;
+}
+#vist_page_image_9{
+    grid-area: vist_page_image_9;
+}
+#visit_social-main{
+    grid-area: visit_social-main;
+}
+
+/*_____________________________FOOTER COMMON CSS_______________________________________*/
+
+.final_footer1{
+    grid-area: final_footer1;
+}
+.final_footer2{
+    grid-area: final_footer2;
+}
+.final_footer3{
+    grid-area: final_footer3;
+}
+.final_footer4{
+    grid-area: final_footer4;
+}
+.final_footer5{
+    grid-area: final_footer5;
+}
+.final_footer6{
+    grid-area: final_footer6;
+}
+.final_footer_main_block{
+    background: #f7f7f7;  
+}
+.our_links:hover{
+    color: aqua; cursor: pointer;
+}
+.line_new{
+    font-size: 18px;
+    font-weight: normal;
+    font-family: Arial Narrow, sans-serif ;
+    color: black;
+    line-height: 1.3;
+    width: 300px;
+}
+.news_form{
+    display: flex;
+    padding-top: 20px;
+}
+.iconnews{
+    height: 35px;
+    border-radius: 0px 25px 25px 0px;
+    background: rgb(120,60,132);
+    cursor: pointer;
+    width: 70px;
+    text-align:center;
+    color: white;
+    margin-left: -2%;
+}
+.iconnews:hover{
+    background: aqua;
+}
+.iconnews:active{
+     transform: translate(4px,4px);
+}
+.language_footer{
+    color: rgb(120,60,132);
+    padding-top: 3px;    
+}
+.language_main{
+    padding-left: 8px;
+    word-wrap: break-word;
+}
+.language_spaceong:hover{
+    color: aqua; 
+    cursor: pointer;
+}
+
+/*_____________________________Responsive website CSS code_______________________________________*/
+
+@media only screen and (max-width: 770px){
+    
+    /*__For Genral footer__*/
+    .final_footer{
+      display: grid;
+      height: 950px;
+      grid-template-columns: auto;
+      grid-template-areas:'final_footer1'
+          'final_footer2'
+          'final_footer3'
+          'final_footer4'
+          'final_footer5'
+          'final_footer6';
+      background-color: #f7f7f7;
+      padding: 80px;  
+    }
+    #our_news_form{
+        border-radius: 25px 0px 0px 25px;
+        text-align: center;
+        width: 180px;
+        border: none;
+    }
+    .final_footer6_inbuild{
+        display: block;
+        padding-top: 0px;
+        position: absolute;
+        
+    }
+    .language_spaceong{
+        padding-left: 8px; 
+        display: block;
+    }
+    .final_footer6{
+        display: block;
+        padding-left: 0px;
+        position: relative;
+    }
+    .final_footer5{
+        
+        word-wrap: break-word;
+    }
+    .final_footertext{
+        text-align:left;
+        font-size: 26px;
+        font-weight: normal;
+        font-family: Georgia, serif;
+        color: black;
+        line-height: 2;
+        float: left;   
+    }
+    .line_gap{
+        line-height: 1;
+    }
+    .our_links{
+        font-size: 17px;
+        font-weight: bold;
+        font-family: Arial Narrow, sans-serif ;
+        color: rgb(120,60,132);  
+    }
+    .final_footer1{
+        height: 150px;
+    }
+    .final_footer2{
+        height: 150px;
+        margin-top: 40px;
+    }
+    .final_footer3{
+        height: 150px;
+        margin-top: 40px;
+    }
+    .final_footer4{
+        height: 150px;
+        margin-top: 40px;
+    }
+    .final_footer5{
+        height: 150px;
+        margin-top: 40px;
+    }
+    .final_footer6{
+        height: 100px;
+        transform: translateY(-80%);
+    }
+    
+    /*__For info Page__*/
+    
+    .grid-container-info{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-areas:
+          'visit_logo'
+          'visit_nav'
+          'visit_covid'
+          'info_text_button'
+          'one'
+          'four'
+          'six'
+          'five'
+          'two'
+          'three'
+          'visit_social'
+          'final_footer_main_block';
+      background-color: white;
+    }
+    #visit_logo{
+        margin: auto;
+    }
+    #the_progress_bar{
+        display: none;
+    }
+    
+    /*__For navigation buttons__*/
+    li.nav{
+      font-family: Ubuntu, sans-serif;/*use this font for headings etc*/
+      font-size: 1em; 
+    }
+    li.nav a.nav {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 6px;
+      text-decoration: none;
+    }
+    .lab_nav{
+        display: block;
+        cursor: pointer;
+        font-size:28px;
+        color: black;
+        float:right;
+        margin-right: 20px;
+        position: relative;
+    }
+    .lab_nav:active{
+        transform: translate(4px,4px);
+    }
+    #toggle_nav:checked + #nav_li_items{
+        display: block;
+    }
+    #nav_li_items{
+        display: none;
+    }
+    #nav_li_items_main{
+        background:white;
+        border-radius: 10px;
+        border: 1px solid white;
+        text-align:center;
+        width:100%;
+        display: block;
+    }
+    #nav_li_items ul li{
+        display: block;
+    }
+    ul.nav {
+      list-style-type: none;
+      margin: 10;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+    }
+    
+    /*__For Home Page__*/
+    
+    .grid-container-index {
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto;
+        grid-template-areas:
+            'logo'
+            'nav'
+            'covid'
+            'vid'
+            'slidershow_mainid'
+            'tile1'
+            'tile2'
+            'tile3'
+            'social'
+            'final_footer_main_block';
+        background-color: white;
+    }
+    #logo{
+        margin: auto;
+    }
+    .slidershow{
+      width: 460px;
+      height: 280px;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 8px solid rgb(235,200,21);
+      border-radius: 25px;
+      transform: translate(-50%,-50%);
+    }
+    .slidershow_main{
+      position: relative;
+      top: 0px;
+      left: 0%;
+      height: 310px;
+      margin: 0;
+      padding: 0;
+      background: none;
+    }
+    
+    /*__For Visit Page__*/
+    
+    .grid-container-visit-main{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-areas:
+          'visit_logo-main'
+          'visit_nav-main'
+          'visit_covid-main'
+          'visit_js_imgshow'
+          'vist_page_image_1'
+          'vist_page_image_2'
+          'vist_page_image_3'
+          'vist_page_image_4'
+          'vist_page_image_5'
+          'vist_page_image_6'
+          'vist_page_image_7'
+          'vist_page_image_8'
+          'vist_page_image_9'
+          'visit_social-main'
+          'final_footer_main_block';
+      background-color: white;
+    }
+    .visit_img_resize{
+        height: 300px;
+        width: 450px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        position: relative; 
+        border:10px solid black;
+    }   
+    #visit_logo-main{
+        margin: auto;
+    }
+    .text_tx {
+      color: black;
+      font-size: 20px;
+      padding: 16px 32px;
+      font-weight: normal;
+    }
+    .mySlides2{
+        height: 300px;
+    }
+    
+    /*__For news Page__*/
+    
+    .grid-container-news{
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-areas:
+          'news_logo'
+          'new_nav'
+          'new_covid'
+          'new_page_section_1'
+          'content_news'
+          'aside'
+          'social_news'
+          'final_footer_main_block';
+      background-color: white;
+    }
+    #news_logo{
+        margin: auto;
+    }
+    @keyframes animation1{
+        from{width:0px; height:0;}
+        to {transform: rotate(720deg); width:446px; height:547px;}
+    }
+    #new_page_section_1{
+        height: 770px;
+        margin: auto;
+    }
+    
+    /*__For ticket Page__*/
+    
+    .grid-container-ticket {
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto;
+        grid-template-areas:
+            'logo'
+            'nav'
+            'covid'
+            'ticket_page_content'
+            'our_payment_form'
+            'social'
+            'final_footer_main_block';
+        background-color: white;
+    }
+    .ticket_page_content{
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas:
+            'tp1'
+            'tp2'
+            'tp3'
+            'tp4'
+            'voucher'
+            'paymentMethods';
+        padding: 25px;
+        background-image: url(img/payment_image.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        position: relative;
+        height: 1220px;
+        
+    }
+    #tp1, #tp3, #paymentMethods,#vpp10 .ticket-page-info1{
+        font-family: Lora, serif; 
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        font-size: 1em;
+        background-color: lightskyblue;
+        color: white;
+        padding:20px;
+        border:2px solid black;
+        border-radius: 20px;
+        margin: auto;
+        height: 150px;
+        width: 90%;
+    }
+    #tp2, #tp4, #voucher,#vpp9 .ticket-page-info{
+        font-family: Lora, serif; 
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        font-size: 1em;
+        background-color: lightseagreen;
+        color: white;
+        padding:20px;
+        border:2px solid black;
+        border-radius: 20px;
+        margin: auto; 
+        height: 150px;
+        width: 90%;
+    }
+    .imput_shot_width{
+        width: 70px;
+        height: 25px;
+    }
+    .imput_shot_width2{
+        width: 160px;
+        height: 25px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #form_line_header{
+        background-color: gray;
+        color: white;
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+    .form_label_header{
+        font-size: 15px;
+    }
+    .form_button{
+        border-radius: 12px;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        width: 110px;
+        background-color: lightgray;
+        cursor: pointer;
+    }
+    .form_check_box{
+        height: 14px;
+        width: 14px;
+        cursor: pointer;
+    }
+    
+}
+
+@media only screen and (min-width: 771px) and (max-width: 1010px){
+    
+    /*__For Genral footer__*/
+    .final_footer{
+      display: grid;
+      height: 300px;
+      grid-template-columns: auto auto;
+      grid-template-areas:'final_footer1 final_footer2'
+                          'final_footer3 final_footer4'
+                          'final_footer5 final_footer6';
+      background-color: #f7f7f7;
+      padding: 80px;  
+      height: 540px;
+    }  
+    #our_news_form{
+        border-radius: 25px 0px 0px 25px;
+        text-align: center;
+        width: 180px;
+        border: none;
+    }
+    .final_footer6_inbuild{
+        display: flex;
+        padding-top: 0px;
+        position: absolute;
+        
+    }
+    .language_spaceong{
+        padding-left: 8px; 
+        display: block;
+    }
+    .final_footer6{
+        display: flex;
+        padding-top: 10px;
+        padding-left: 0px;
+        position: relative;
+    }
+    .final_footer5{
+        padding-top: 10px;
+        padding-left: 80px;
+        word-wrap: break-word;
+    }
+    .final_footertext{
+        text-align:left;
+        font-size: 26px;
+        font-weight: normal;
+        font-family: Georgia, serif;
+        color: black;
+        line-height: 2;
+        padding-left: 80px;   
+    }
+    .line_gap{
+        line-height: 1;
+    }
+    .our_links{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial Narrow, sans-serif ;
+        color: rgb(120,60,132);  
+    }
+    
+    /*__For info Page__*/
+    
+    .grid-container-info{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-areas:
+          'visit_logo visit_nav visit_nav'
+          'visit_covid visit_covid visit_covid'
+          'info_text_button info_text_button info_text_button'
+          'four four six'
+          'five two three'
+          'visit_social visit_social visit_social'
+          'final_footer_main_block final_footer_main_block final_footer_main_block';
+      background-color: white;
+    }
+    #the_progress_bar{
+        display: none;
+    }
+    
+    /*__For navigation buttons__*/
+    li.nav{
+      font-family: Ubuntu, sans-serif;/*use this font for headings etc*/
+      font-size: 1.2em; 
+    }
+    li.nav a.nav {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 6px;
+      text-decoration: none;
+    }
+    .lab_nav{
+        margin: 0 40px 0 0;
+        font-size: 26px;   
+        text-align: center;
+        display: none;
+    }
+    li.nav {
+      float: right;
+    }
+    ul.nav {
+      list-style-type: none;
+      margin: 10;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+    }
+    
+    /*__For Home Page__*/
+    
+    .grid-container-index {
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+            'logo nav nav'
+            'covid covid covid'
+            'vid vid vid'
+            'slidershow_mainid slidershow_mainid slidershow_mainid'
+            'tile1 tile1 tile1'
+            'tile2 tile2 tile3'
+            'social social social'
+            'final_footer_main_block final_footer_main_block final_footer_main_block';
+        background-color: white;
+    }   
+    .slidershow{
+      width: 700px;
+      height: 400px;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 8px solid rgb(235,200,21);
+      border-radius: 25px;
+      transform: translate(-50%,-50%);
+    }  
+    .slidershow_main{
+      position: relative;
+      top: 0px;
+      left: 0%;
+      height: 420px;
+      margin: 0;
+      padding: 0;
+      background: none;
+    }
+       
+    /*__For Visit Page__*/
+    
+    .grid-container-visit-main{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-areas:
+          'visit_logo-main visit_nav-main visit_nav-main visit_nav-main'
+          'visit_covid-main visit_covid-main visit_covid-main visit_covid-main'
+          'visit_js_imgshow visit_js_imgshow visit_js_imgshow visit_js_imgshow'
+          'vist_page_image_1 vist_page_image_1 vist_page_image_2 vist_page_image_2'
+          'vist_page_image_3 vist_page_image_3 vist_page_image_4 vist_page_image_4'
+          'vist_page_image_5 vist_page_image_5 vist_page_image_6 vist_page_image_6'
+          'vist_page_image_7 vist_page_image_7 vist_page_image_8 vist_page_image_8'
+          'vist_page_image_9 vist_page_image_9 vist_page_image_9 vist_page_image_9'
+          'visit_social-main visit_social-main visit_social-main visit_social-main'
+          'final_footer_main_block final_footer_main_block final_footer_main_block final_footer_main_block';
+      background-color: white;
+    }
+    .visit_img_resize{
+        height: 218.5px;
+        width: 342px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        position: relative; 
+        border:10px solid black;
+    }
+    .text_tx {
+      color: black;
+      font-size: 15px;
+      padding: 16px 32px;
+      font-weight: normal;
+    }
+    .mySlides2{
+        height: 500px;
+    }
+    
+    /*__For news Page__*/
+    
+    .grid-container-news{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-areas:
+          'news_logo new_nav new_nav new_nav'
+          'new_covid new_covid new_covid new_covid'
+          'new_page_section_1 new_page_section_1 new_page_section_1 new_page_section_1'
+          'content_news content_news content_news aside'
+          'social_news social_news social_news social_news'
+          'final_footer_main_block final_footer_main_block final_footer_main_block final_footer_main_block';
+      background-color: white;
+    }
+    @keyframes animation1 {
+        from{width:0px; height:0;}
+        to {transform: rotate(720deg); width:527px; height:646px;}
+    }
+    #new_page_section_1{
+        height: 870px;
+        margin: auto;
+    }
+    
+    /*__For ticket Page__*/
+    
+    .grid-container-ticket {
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas:
+            'logo nav nav nav'
+            'covid covid covid covid'
+            'ticket_page_content ticket_page_content ticket_page_content ticket_page_content'
+            'our_payment_form our_payment_form our_payment_form our_payment_form'
+            'social social social social'
+            'final_footer_main_block final_footer_main_block final_footer_main_block final_footer_main_block';
+        background-color: white;
+    }
+    .ticket_page_content{
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            'tp1 tp2'
+            ' tp3 tp4'
+            'voucher paymentMethods';
+        padding: 25px;
+        background-image: url(img/payment_image.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        position: relative;
+        height: 600px;
+    }
+    #tp1, #tp3, #paymentMethods,#vpp10 .ticket-page-info1{
+        font-family: Lora, serif; 
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        font-size: 1em;
+        background-color: lightskyblue;
+        color: white;
+        padding:20px;
+        border:2px solid black;
+        border-radius: 20px;
+        margin: auto;
+        height: 150px;
+        width: 300px;
+    }
+    #tp2, #tp4, #voucher,#vpp9 .ticket-page-info{
+        font-family: Lora, serif; 
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        font-size: 1em;
+        background-color: lightseagreen;
+        color: white;
+        padding:20px;
+        border:2px solid black;
+        border-radius: 20px;
+        margin: auto; 
+        height: 150px;
+        width: 300px;
+    }
+    .imput_shot_width{
+        width: 122px;
+        height: 30px;
+    }
+    .imput_shot_width2{
+        width: 267px;
+        height: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #form_line_header{
+        background-color: gray;
+        color: white;
+        padding: 5px 10px;
+        font-size: 25px;
+    }
+    .form_label_header{
+        font-size: 20px;
+    }
+    .form_button{
+        border-radius: 12px;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        width: 150px;
+        background-color: lightgray;
+        cursor: pointer;
+    }
+    .form_check_box{
+        height: 18px;
+        width: 18px;
+        cursor: pointer;
+    }
+    
+}
+
+@media only screen and (min-width: 1011px) and (max-width: 1450px){
+    
+    /*__For Genral footer__*/
+    .final_footer{
+      display: grid;
+      height: 320px;
+      grid-template-columns: auto auto auto auto;
+      grid-template-areas:'final_footer1 final_footer2 final_footer3 final_footer4'
+                          'final_footer5 final_footer5 final_footer6 final_footer6';
+      background-color: #f7f7f7;
+      padding: 80px;  
+    }
+    #our_news_form{
+        border-radius: 25px 0px 0px 25px;
+        text-align: center;
+        width: 300px;
+        border: none;
+    }
+    .final_footer6_inbuild{
+        display: flex;
+        padding-top: 0px;
+       margin: auto;
+        left: 0px;
+        float: right;
+    }
+    .language_spaceong{
+        padding-left: 8px; 
+    }
+    .final_footer6{
+        display: flex;
+        padding-top: 25px;
+        padding-left: 0px;
+        position: relative;
+        
+    }
+    .final_footer5{
+        padding-top: 25px;
+        padding-left: 0px;
+        margin: auto;
+        word-wrap: break-word;
+    }
+    .final_footertext{
+        text-align:left;
+        font-size: 26px;
+        font-weight: bolder;
+        font-family: Georgia, serif;
+        color: black;
+        line-height: 2;
+        margin: auto;
+    }
+    .line_gap{
+        line-height: 1.4;
+    }
+    .our_links{
+        font-size: 22px;
+        font-weight: bold;
+        font-family: Arial Narrow, sans-serif ;
+        color: rgb(120,60,132);  
+    }
+    .final_footer1{
+        margin: auto;
+    }
+    .final_footer2{
+        margin: auto;
+    }
+    .final_footer3{
+        margin: auto;
+    }
+    .final_footer4{
+        margin: auto;
+    }
+    
+    /*__For info Page__*/
+    
+    .grid-container-info{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-areas:
+          'visit_logo visit_nav visit_nav visit_nav'
+          'visit_covid visit_covid visit_covid visit_covid'
+          'info_text_button info_text_button info_text_button info_text_button'
+          'four four four six'
+          'five five two three'
+          'visit_social visit_social visit_social visit_social'
+          'final_footer_main_block final_footer_main_block final_footer_main_block final_footer_main_block';
+      background-color: white;
+    }
+    
+    /*__For navigation buttons__*/
+    li.nav{
+      font-family: Ubuntu, sans-serif;/*use this font for headings etc*/
+      font-size: 1.8em; 
+    }
+    li.nav a.nav {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .lab_nav{
+        margin: 0 40px 0 0;
+        font-size: 26px;   
+        text-align: center;
+        display: none;
+    }
+    li.nav {
+      float: right;
+    }
+    ul.nav {
+      list-style-type: none;
+      margin: 10;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+    }
+    
+    /*__For Home Page__*/
+    
+    .grid-container-index {
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+            'logo nav nav'
+            'covid covid covid'
+            'vid vid vid'
+            'slidershow_mainid slidershow_mainid slidershow_mainid'
+            'tile1 tile2 tile3'
+            'social social social'
+            'final_footer_main_block final_footer_main_block final_footer_main_block';
+        background-color: white;
+    }
+    .slidershow{
+      width: 700px;
+      height: 400px;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 8px solid rgb(235,200,21);
+      border-radius: 25px;
+      transform: translate(-50%,-50%);
+    }
+    .slidershow_main{
+      position: relative;
+      top: 0px;
+      left: 0%;
+      height: 420px;
+      margin: 0;
+      padding: 0;
+      background: none;
+    }
+    
+    /*__For Visit Page__*/
+    
+    .grid-container-visit-main{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-areas:
+          'visit_logo-main visit_nav-main visit_nav-main visit_nav-main'
+          'visit_covid-main visit_covid-main visit_covid-main visit_covid-main'
+          'visit_js_imgshow visit_js_imgshow visit_js_imgshow visit_js_imgshow'
+          'vist_page_image_1 vist_page_image_1 vist_page_image_2 vist_page_image_2'
+          'vist_page_image_3 vist_page_image_3 vist_page_image_4 vist_page_image_4'
+          'vist_page_image_5 vist_page_image_5 vist_page_image_6 vist_page_image_6'
+          'vist_page_image_7 vist_page_image_7 vist_page_image_8 vist_page_image_8'
+          'vist_page_image_9 vist_page_image_9 vist_page_image_9 vist_page_image_9'
+          'visit_social-main visit_social-main visit_social-main visit_social-main'
+          'final_footer_main_block final_footer_main_block final_footer_main_block final_footer_main_block';
+      background-color: white;
+    }
+    .visit_img_resize{
+        height: 300px;
+        width: 450px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        position: relative; 
+        border:10px solid black;
+    }
+    .text_tx {
+      color: black;
+      font-size: 20px;
+      padding: 16px 32px;
+      font-weight: normal;
+    }
+    .mySlides2{
+        height: 500px;
+    }
+
+    /*__For news Page__*/
+    
+    .grid-container-news{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-areas:
+          'news_logo new_nav new_nav new_nav'
+          'new_covid new_covid new_covid new_covid'
+          'new_page_section_1 new_page_section_1 new_page_section_1 new_page_section_1'
+          'content_news content_news content_news aside'
+          'social_news social_news social_news social_news'
+          'final_footer_main_block final_footer_main_block final_footer_main_block final_footer_main_block';
+      background-color: white;
+    }
+    @keyframes animation1 {
+        from{width:0px; height:0;}
+        to {transform: rotate(720deg); width:620px; height:760px;}
+    }
+    #new_page_section_1{
+        height: 975px;
+        margin: auto;
+    }
+    
+    /*__For ticket Page__*/
+    
+    .grid-container-ticket {
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas:
+            'logo nav nav nav'
+            'covid covid covid covid'
+            'ticket_page_content ticket_page_content ticket_page_content ticket_page_content'
+            'our_payment_form our_payment_form our_payment_form our_payment_form'
+            'social social social social'
+            'final_footer_main_block final_footer_main_block final_footer_main_block final_footer_main_block';
+        background-color: white;
+    }
+    .ticket_page_content{
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+            'tp1 tp2 tp3'
+            'voucher paymentMethods  tp4';
+        padding: 25px;
+        background-image: url(img/payment_image.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        position: relative;
+        height: 420px;
+    }
+    #tp1, #tp3, #paymentMethods,#vpp10 .ticket-page-info1{
+        font-family: Lora, serif; 
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        font-size: 1em;
+        background-color: lightskyblue;
+        color: white;
+        padding:20px;
+        border:2px solid black;
+        border-radius: 20px;
+        margin: auto;
+        height: 150px;
+        width: 260px;
+    }
+    #tp2, #tp4, #voucher,#vpp9 .ticket-page-info{
+        font-family: Lora, serif; 
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        font-size: 1em;
+        background-color: lightseagreen;
+        color: white;
+        padding:20px;
+        border:2px solid black;
+        border-radius: 20px;
+        margin: auto; 
+        height: 150px;
+        width: 260px;
+    }
+    .imput_shot_width{
+        width: 122px;
+        height: 30px;
+    }
+    .imput_shot_width2{
+        width: 267px;
+        height: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #form_line_header{
+        background-color: gray;
+        color: white;
+        padding: 5px 10px;
+        font-size: 25px;
+    }
+    .form_label_header{
+        font-size: 20px;
+    }
+    .form_button{
+        border-radius: 12px;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        width: 150px;
+        background-color: lightgray;
+        cursor: pointer;
+    }
+    .form_check_box{
+        height: 18px;
+        width: 18px;
+        cursor: pointer;
+    }
+   
+}
+
+@media only screen and (min-width: 1451px){
+    
+    /*__For Genral footer__*/
+    
+    .final_footer{
+      display: grid;
+      height: 320px;
+      grid-template-columns: auto auto auto auto;
+      grid-template-areas:'final_footer1 final_footer2 final_footer3 final_footer4'
+                          'final_footer5 final_footer5 final_footer6 final_footer6';
+      background-color: #f7f7f7;
+      padding: 80px;  
+    }
+    #our_news_form{
+        border-radius: 25px 0px 0px 25px;
+        text-align: center;
+        width: 300px;
+        border: none;
+    }
+    .final_footer6_inbuild{
+        display: flex;
+        padding-top: 0px;
+       margin: auto;
+        left: 0px;
+        float: right;
+    }
+    .language_spaceong{
+        padding-left: 8px; 
+    }
+    .final_footer6{
+        display: flex;
+        padding-top: 25px;
+        padding-left: 0px;
+        position: relative;
+        
+    }
+    .final_footer5{
+        padding-top: 25px;
+        padding-left: 0px;
+        margin: auto;
+        word-wrap: break-word;
+    }
+    .final_footertext{
+        text-align:left;
+        font-size: 26px;
+        font-weight: bolder;
+        font-family: Georgia, serif;
+        color: black;
+        line-height: 2;
+        margin: auto;
+    }
+    .line_gap{
+        line-height: 1.4;
+    }
+    .our_links{
+        font-size: 22px;
+        font-weight: bold;
+        font-family: Arial Narrow, sans-serif ;
+        color: rgb(120,60,132);  
+    }
+    .final_footer1{
+        margin: auto;
+    }
+    .final_footer2{
+        margin: auto;
+    }
+    .final_footer3{
+        margin: auto;
+    }
+    .final_footer4{
+        margin: auto;
+    }
+    
+    /*__For info Page__*/
+    
+    .grid-container-info{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-areas:
+          'visit_logo visit_nav visit_nav visit_nav'
+          'visit_covid visit_covid visit_covid visit_covid'
+          'info_text_button info_text_button info_text_button info_text_button'
+          'four four four six'
+          'five five two three'
+          'visit_social visit_social visit_social visit_social'
+          'final_footer_main_block final_footer_main_block final_footer_main_block final_footer_main_block';
+      background-color: white;
+    }
+    
+    /*__For navigation buttons__*/
+    
+    li.nav{
+      font-family: Ubuntu, sans-serif;/*use this font for headings etc*/
+      font-size: 1.8em; 
+    }
+    li.nav a.nav {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    .lab_nav{
+        margin: 0 40px 0 0;
+        font-size: 26px;   
+        text-align: center;
+        display: none;
+    }
+    li.nav {
+      float: right;
+    }
+    ul.nav {
+      list-style-type: none;
+      margin: 10;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+    }
+    
+    /*__For Home Page__*/
+    
+    .grid-container-index {
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+            'logo nav nav'
+            'covid covid covid'
+            'vid vid vid'
+            'slidershow_mainid slidershow_mainid slidershow_mainid'
+            'tile1 tile2 tile3'
+            'social social social'
+            'final_footer_main_block final_footer_main_block final_footer_main_block';
+        background-color: white;
+    }
+    .slidershow{
+      width: 700px;
+      height: 400px;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 8px solid rgb(235,200,21);
+      border-radius: 25px;
+      transform: translate(-50%,-50%);
+    }
+    .slidershow_main{
+      position: relative;
+      top: 0px;
+      left: 0%;
+      height: 420px;
+      margin: 0;
+      padding: 0;
+      background: none;
+    }
+    
+    /*__For Visit Page__*/
+    
+    .grid-container-visit-main{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-areas:
+          'visit_logo-main visit_nav-main visit_nav-main'
+          'visit_covid-main visit_covid-main visit_covid-main'
+          'visit_js_imgshow visit_js_imgshow visit_js_imgshow'
+          'vist_page_image_1 vist_page_image_2 vist_page_image_3'
+          'vist_page_image_4 vist_page_image_5 vist_page_image_6'
+          'vist_page_image_7 vist_page_image_8 vist_page_image_9'
+          'visit_social-main visit_social-main visit_social-main'
+          'final_footer_main_block final_footer_main_block final_footer_main_block';
+      background-color: white;
+    }
+    .visit_img_resize{
+        height: 300px;
+        width: 450px;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        position: relative; 
+        border:10px solid black;
+    }
+    .text_tx {
+      color: black;
+      font-size: 20px;
+      padding: 16px 32px;
+      font-weight: normal;
+    }
+    .mySlides2{
+        height: 500px;
+    }
+    
+    /*__For news Page__*/
+    
+    .grid-container-news{
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-areas:
+          'news_logo new_nav new_nav new_nav'
+          'new_covid new_covid new_covid new_covid'
+          'new_page_section_1 new_page_section_1 new_page_section_1 new_page_section_1'
+          'content_news content_news content_news aside'
+          'social_news social_news social_news social_news'
+          'final_footer_main_block final_footer_main_block final_footer_main_block final_footer_main_block';
+      background-color: white;
+    }
+    @keyframes animation1 {
+        from{width:0px; height:0;}
+        to {transform: rotate(720deg); width:620px; height:760px;}
+    }
+    #new_page_section_1{
+        height: 955px;
+        margin: auto;
+    }
+    
+    /*__For ticket Page__*/
+    
+    .grid-container-ticket {
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas:
+            'logo nav nav nav'
+            'covid covid covid covid'
+            'ticket_page_content ticket_page_content ticket_page_content ticket_page_content'
+            'our_payment_form our_payment_form our_payment_form our_payment_form'
+            'social social social social'
+            'final_footer_main_block final_footer_main_block final_footer_main_block final_footer_main_block';
+        background-color: white;
+    }
+    .ticket_page_content{
+        display: grid;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+            'tp1 tp2 tp3'
+            'voucher paymentMethods  tp4';
+        padding: 25px;
+        background-image: url(img/payment_image.jpg);
+        background-repeat: no-repeat;
+        background-size:cover;
+        position: relative;
+        height: 420px;
+    }
+    #tp1, #tp3, #paymentMethods,#vpp10 .ticket-page-info1{
+        font-family: Lora, serif; 
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        font-size: 1em;
+        background-color: lightskyblue;
+        color: white;
+        padding:20px;
+        border:2px solid black;
+        border-radius: 20px;
+        margin: auto;
+        height: 150px;
+        width: 260px;
+    }
+    #tp2, #tp4, #voucher,#vpp9 .ticket-page-info{
+        font-family: Lora, serif; 
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        font-size: 1em;
+        background-color: lightseagreen;
+        color: white;
+        padding:20px;
+        border:2px solid black;
+        border-radius: 20px;
+        margin: auto; 
+        height: 150px;
+        width: 260px;
+    } 
+    .imput_shot_width{
+        width: 122px;
+        height: 30px;
+    }
+    .imput_shot_width2{
+        width: 267px;
+        height: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #form_line_header{
+        background-color: gray;
+        color: white;
+        padding: 5px 10px;
+        font-size: 25px;
+    }
+    .form_label_header{
+        font-size: 20px;
+    }
+    .form_button{
+        border-radius: 12px;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        width: 150px;
+        background-color: lightgray;
+        cursor: pointer;
+    }
+    .form_check_box{
+        height: 18px;
+        width: 18px;
+        cursor: pointer;
+    }
+
+}

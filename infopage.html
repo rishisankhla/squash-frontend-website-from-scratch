@@ -1,0 +1,219 @@
+<!-- definition that this document is an HTML5 document -->
+<!DOCTYPE html>
+
+<!-- declaration of the language Web page. This is meant to assist search engines and browsers -->
+<html lang="en">
+<link rel=“canonical“ href=”index.hmtl”>
+	
+<html>
+	
+<!-- HEAD SECTION that contains all the invisible (meta) information about the page -->
+<head>
+    
+  <!--appears in browser tab-->
+  <title>Squash Page</title>
+	
+  <!--encode any character of pretty much any language and browser knows how to interpret every character-->
+  <meta charset="utf-8">
+	
+  <!--description might be found by a service such as Google, which is building up a comprehensive list of pages around the web and gives some clue as to what the content will be-->
+  <meta name="description" content="Explore the Squash blog site!">
+	
+  <!--keywords so that search engines will be able to find the page and classify it accordingly - and when you search for key words in a search engine, it might come up with this page. -->
+  <meta name="keywords" content="squash, sports, game, racket, ball, club">	
+  <meta name="author" content="self made">
+	
+  <!--define how the page is presented on a variety of different devices, here: use the whole width of the device and scale to size one -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--refresh the page every 600 seconds-->
+  <meta name="refresh" content="600">
+	
+  <!--(no)index specifies if the site should get indexed by the search engine; (no)follow specifies if the robot can follow the link on the page to drill down into the site. Since site is in development, both are set to no-->
+  <meta name="robots" content="noindex,nofollow">
+	
+  <!--allow webpage to become a rich object in social networks-->
+  <meta name="og:image" property="og:image" content="picURL">
+  <meta name="og:title" property="og:title" content="Squash page">
+  <meta name="og:description" property="og:description" content="Explore the Squash blog site!">
+  <meta name="og:url" property="og:url" content="pageURL">
+
+  <!-- reference to external stylesheet-->
+  <link rel="stylesheet" href="sitestyle.css">
+
+  <!-- google font pairings reference-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <!-- google font icons reference-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+  <!--javascript files-->
+  <script src="javascriptfile1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.js"></script>
+    
+</head>
+    
+<!-- BODY SECTION that contains the structure for all the visble content -->
+<body>
+    
+    <div id="the_progress_bar"></div> 
+
+    <div class="grid-container-info">  
+
+        <!-- logo HEADER -->
+        <div id="visit_logo">
+            <a class="logo" href="index.html" target="_self">
+                <img src="img/squash_logo.jpg" alt="squash logo" width="180" height="180" onerror="this.src='img/squash_logo.jpg'">
+            </a>
+        </div>
+        
+        <!-- Navigation bar HEADER -->
+        <div id="visit_nav">
+            <ul class="nav">
+                 <li style="float:right"><a href="index.html"><i class="material-icons">shopping_basket</i></a></li>
+                 <li style="float:right"><a href="index.html"><i class="material-icons">language</i></a></li>
+                 <li style="float:right"><a href="index.html"><i class="material-icons">accessible_forward</i></a></li>
+                 <li style="float:right" class="search"><input type="text" placeholder="Search.."></li>
+            </ul>
+            <div id="nav_li_items_main">
+                <label class="lab_nav" for="toggle_nav">&#9776;</label>
+                <input type="checkbox" id= "toggle_nav"/>
+                <div id="nav_li_items">
+                    <ul class="nav">
+                        <li class="nav"><a class="nav" href="index.html">HOME</a></li>
+                        <li class="nav"><a class="nav" href="visit.html">VISIT</a></li>
+                        <li class="nav"><a class="nav" href="ticket.html">OFFERS</a></li>
+                        <li class="nav"><a class="nav" href="news.html">NEWS</a></li>
+                        <li class="nav"><a class="nav" href="infopage.html">INFO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>	
+        
+        <!-- Covid information HEADER -->
+        <div id="visit_covid">
+            <p class="attention">Find current visitor information reg. Covid-19 <a href="infopage.html" style="color:black; font"><u>here</u></a>.</p>
+        </div>
+
+        <!--font-size button-->
+        <!-- took help from https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_style_fontsize2 -->
+        <div id="info_text_button">
+            Select font size:
+            <select onchange="myFunction(this);">
+              <option>xx-small</option>
+              <option>x-small</option>
+              <option>small</option>
+              <option selected="selected">medium</option>
+              <option>large</option>
+              <option>x-large</option>
+            </select>
+            <script src="javascriptfile5.js"></script>
+        </div>
+        
+        <!-- Tile 2 on info page - accessibility information -->
+        <div id = "vpp2">
+            <div class="visit-page-info">
+                <img src="img/Accessibility.png" alt="Accessibility" width="50" height="50">
+                <h3> Accessibility </h3>
+                <p>The following guidance and information has been created in order to help guests with additional needs have the best experience possible whilst enjoying a day with us here at our affiliated clubs!</p>
+                <ul>
+                    <li>We're providing information to guests before they visit to our clubs – including a brand new Accessibility of club map (showing squash courts). </li>
+                    <li>Ensuring that purchasing membership and entering the sports club is as smooth as possible</li>
+                    <li>Reviewing our squash court accessibility policies</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tile 2 on plan info page - opening times -->
+        <div id = "vpp3">
+            <div class="visit-page-info1">
+                <img src="img/calendar.png" alt="Opening Times Calendar" width="50" height="50"> 
+                <h3> Opening Times of our affiliated clubs </h3>
+                <table>
+                    <tr><th>Monday</th><td>9am - 10pm</td></tr>
+                    <tr><th>Tuesday</th><td>9am - 10pm</td></tr>
+                    <tr><th>Wednesday</th><td>9am - 10pm</td></tr>
+                    <tr><th>Thursday</th><td>9am - 10pm</td></tr>
+                    <tr><th>Friday</th><td>9am - 10pm</td></tr>
+                    <tr><th>Saturday</th><td>9am - 11:30pm</td></tr>
+                    <tr><th>Sunday</th><td>9am - 11:30pm</td></tr>
+                </table>
+                <p>These are the timing for squash courts, which are strictly followed. Whereas our other culb facilities is open 24x7. </p>
+            </div>
+        </div>
+
+        <!-- Tile 3 on plan info page - FAQ -->
+        <div id = "vpp4">
+            <div class="visit-page-info">
+                <img src="img/faq.png" alt="FAQ" width="50" height="50"> 
+                <h3> FAQ </h3>
+                <h4> How can I purchase membership on-line? </h4>
+                <p> You can purchase your our full membership 24 hours prior through our convenient and secure online booking service. You can pay by debit card/credit card/netbanking. Please, remember to check your transaction before making the payment. </p>
+                <h4> What do I do if I am having trouble retrieving my internet membership? </h4>
+                <p> Wait for the confirmation mail and note down the Transaction Id and Itinerary No. For further information call us </p>
+                <h4> How can I book a squash club visit? </h4>
+                <p> You may fill a form for club visit of 2 or more people. Our team will get in touch. </p>
+                <h4> Does Magazine have special package for sport events? </h4>
+                <p> Yes we do, for more details contact our call centre. </p>
+                <h4> Can I bring food or drinks into the affiliation clubs? </h4>
+                <p> No food or drinks may be brought inside our club premise. </p>
+                <h4> Are children’s equipment (racket, soft ball) available? </h4>
+                <p> Yes, only for kids and children. The same can be purchased in the club. </p>
+                <h4> Are locker facilities available at affiliated clubs? </h4>
+                <p> Yes locker facilities are there but for full time members only, if you want you can buy our combo packs. </p>
+            </div>
+        </div>
+
+        <!-- Tile 4 on plan info page - food information -->
+        <div id = "vpp5">
+            <div class="visit-page-info1">
+                <img src="img/food.png" alt="food" width="50" height="50">
+                <h3> Food Court at our clubs </h3>
+                <p>Gelson's Sip 'N Shop - Gelson's in-Club bars have become a regular draw for players. Starting two years ago, the club grocer gave these shoppers another reason to stop by with Sip 'N Shop, a service that lets players relax at the bar after match while a store associate does all the shopping for sports related food.</p>
+                <p>The Coffee Shop - is the one available shops at the club entrance, so you can purchase coffee while entering the club and carry with you while enjoying the tournament show. The shop is designed to look like a giant cup of coffee.</p>
+                <p>Nathan's Famous Drink's - While Nathan’s Famous Drink's are widely accessible, some people will tell you that the best way to get energy before any game is to go for an energy drink, or can have after the game.</p>
+                <p>Mrs. Knott's Chicken Dinner Restaurant - The food at Mrs. Knott's Chicken Dinner Restaurant is so good that sometime players just come in evening to have early dinner, but this chiken restaurant is especially build for squash players to have a good meal after the match gets over.</p>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Tile 5 on plan info page - shopping information -->
+        <div id = "vpp6">  
+            <div class="visit-page-info">
+                <img src="img/shop.png" alt="stores" width="50" height="50">
+                <h3> Shops at our affiliated clubs</h3>
+                <p>We have the following shops and stores at our affiliated clubs, they provide variety of products related to sqyash game like:</p>
+                <p>SquashMerch – Custom designed unofficial merchandise created in England. These guys are obsessed with theme of sports and squash and love to create new designs featuring sports attractions and top players from around the world. They don’t use any branding and logos from the clubs as they prefer to stay honest and avoid using our Magazine intellectual property.</p>
+                <p>edition shop – Based in Milton Keynes, edition shop currently only offers a small portfolio of limited edition collection products for a true squash game Enthusiast.</p>
+                <p>Squashsnaps – Offers some nice attire featuring listings of top squash players, coastersnaps has sports inspired designs for every enthusiast!</p>
+                <p>Gamefanson – Based in the heart of England, Gamefanson offers a store dedicated to players who won game of the month and also has a second store which covers theme related to squash game.</p>
+                <p>Racket Shop - is the oldest shop here which sells both traditional and latest technology squash equipments like grips, balls, normal size rackets, custom rackets and full-man kit.</p>
+                <p>EnergyDrink - is a shop where you can buy stuff to eat between the game/tournament, you can also buy combo packs. </p>
+                <p>SportCloths - is the place to go to shop for the best clothes, such as a great sweater or t-shirt featuring squash and sports related quotes. If you’re planning go for whole day match then you should definitely try our theme clothes. </p>
+            </div>
+        </div>
+
+        <!-- Social media FOOTER -->
+        <div id="visit_social">
+            <ul class="social">
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">feed</i></a></li>
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">thumb_up_alt</i></a></li>
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">android</i></a></li>
+                <li class="social"><a href="index.html"><i class="material-icons" style="font-size:48px;">facebook</i></a></li>
+            </ul>
+        </div>
+
+        <!-- General information FOOTER -->
+        <script id="template" type="template/handlebars">
+            {{{content}}}
+        </script>
+        <script src="javascriptfile3.js"></script>
+
+    </div>
+
+</body>
+    
+</html>
